@@ -192,20 +192,26 @@ async function createStudents() {
     ]);
     console.log("✅ Inserted");
 }
-createStudents();
+//createStudents();
 
 // read document
 async function readStudents() {
     const all = await Student.find();
     console.log(all);
 }
-readStudents();
+//readStudents();
 
 // update document
-
+async function updateStudent() {
+    await Student.updateOne({ name: "Ali" }, { age: 22 });
+    console.log("✅ Updated Ali");
+}
 
 // delete document
 
 
 
 
+//readStudents();
+//createStudents();
+//updateStudent();
