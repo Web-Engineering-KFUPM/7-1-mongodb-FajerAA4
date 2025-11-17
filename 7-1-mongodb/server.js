@@ -192,7 +192,6 @@ async function createStudents() {
     ]);
     console.log("✅ Inserted");
 }
-//createStudents();
 
 // read document
 async function readStudents() {
@@ -208,10 +207,14 @@ async function updateStudent() {
 }
 
 // delete document
+async function deleteStudent() {
+    await Student.deleteOne({ name: "Sara" });
+    console.log("✅ Deleted Sara");
+}
 
 
 
-
-//readStudents();
 //createStudents();
+//readStudents();
 //updateStudent();
+deleteStudent();
