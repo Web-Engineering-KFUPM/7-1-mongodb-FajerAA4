@@ -168,8 +168,11 @@
  */
 
 import mongoose from "mongoose";
-
 // establish connection
+const URI = "mongodb+srv://s202280160_db_user:Ss937758%40saidah@cluster0.0dtd0se.mongodb.net/?appName=Cluster0";
+mongoose.connect(URI)
+    .then(() => console.log("✅ Connected to MongoDB Cloud"))
+    .catch(err => console.log("❌ Connection Error:", err));
 
 
 // define schema
